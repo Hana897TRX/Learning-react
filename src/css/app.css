@@ -1,0 +1,20 @@
+.container{
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.container > *{
+    width: 100%;
+    position: absolute;
+}
+
+img {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    border-color: #0000;
+    margin: 0%;
+}

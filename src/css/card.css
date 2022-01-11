@@ -1,0 +1,13 @@
+.containerCard {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    box-shadow : 3px 3px 5px grey;
+    border-color: #0000;
+    margin: 2%;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 15px;
+}

@@ -4,6 +4,10 @@ import { TodoItem } from './components/TodoItem';
 import { CreateTodoButton } from './components/CreateTodoButton';
 import { TodoList } from './components/TodoList';
 import { TodoSearch } from './components/TodoSearch';
+import { Card } from './components/Card';
+import './css/app.css';
+
+const backgrounImg = require('./img/background.jpg')
 
 const todos = [
   { id: 1, text: 'Cortar cebolla', completed: false },
@@ -14,15 +18,28 @@ const todos = [
 function App(props) {
   return (
     <React.Fragment>
-      <TodoCounter/>
-      <TodoSearch/>
-      <TodoList>
-        {todos.map(todo => (
-          <TodoItem key={todo.id} text={todo.text}/>
-        ) )}
-      </TodoList>
-      <CreateTodoButton />
-      <button>+</button>
+      <div className='container'>
+        <img src={backgrounImg} alt='background img'/>
+        <div>
+          <Card>
+            <TodoCounter />
+          </Card>
+          <Card>
+            <TodoSearch/>
+          </Card>
+          <TodoList>
+            {todos.map(todo => (
+              <Card>
+                <TodoItem key={todo.id} text={todo.text}/>
+              </Card>
+            ) )}
+          </TodoList>
+          <CreateTodoButton/>
+          <div>
+            <button>+</button>
+          </div>
+        </div>
+      </div>
     </React.Fragment>
   );
 }
